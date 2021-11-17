@@ -1,0 +1,110 @@
+* {
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #004a51;
+    font-family: "Courier New", "sans-serif";
+    font-size: 20px;
+    color: #0f001e;
+}
+.container1{
+    display: flex;
+    justify-content: center;
+}
+.container2 {
+    display: flex;
+    justify-content: center;
+}
+@keyframes color-change {
+    from {background-color: #871c0e;}
+    to {background-color: #bb4e0b;}
+}
+.box1 {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    line-height: 300px;
+    margin: 5px;
+    animation: color-change 2s linear alternate infinite;
+    box-shadow: 0 0 5px 0 #FFB27E;
+}
+.button {
+    border: none;
+    height: 300px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #871c0e;
+    box-shadow: 0 0 5px 0 #FFB27E;
+}
+.button:hover {
+    background-color: #bb4e0b;
+}
+.box2 {
+    width: 150px;
+    height: 150px;
+    background-color: #871c0e;
+    border-radius: 10px;
+    margin: 5px;
+    padding-top: 40px;
+    position: relative;
+    box-shadow: 0 0 5px 0 #FFB27E;
+    animation: dance 2s infinite alternate;
+}
+.box2:hover {
+    animation-play-state: paused;
+}
+@keyframes dance {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 150px;
+    }
+    50% {
+        top: 150px;
+        left: 150px;
+    }
+    75% {
+        top: 150px;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+.box3 {
+    height: 150px;
+    width: 150px;
+    margin: 155px 5px 5px 305px;
+    padding-top: 35px;
+    border-radius: 10px;
+    background-color: #f08315;
+    box-shadow: 0 0 5px 0 #FFB27E;
+}
+@keyframes box-grow {
+    0% {
+        height: 150px;
+        margin-top: 155px;
+    }
+    50% {
+        height: 300px;
+        margin-top: 5px;
+    }
+    100% {
+        height: 300px;
+        margin-top: 5px;
+        width: 300px;
+        margin-left: 155px;
+    }
+}
+.grow {
+    animation: box-grow 2s;
+    animation-fill-mode: forwards;
+}
+.shrink {
+    animation: box-grow 2s reverse;
+}
